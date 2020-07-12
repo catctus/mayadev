@@ -1,0 +1,11 @@
+global proc AEblendCurveTemplate( string $nodeName )
+{
+    editorTemplate -beginScrollLayout;
+
+        editorTemplate -beginLayout "Ramp Blend Attributes" -collapse 0;
+            AEaddRampControl( $nodeName + ".curveRamp" );
+        editorTemplate -endLayout;
+
+    editorTemplate -addExtraControls;
+    editorTemplate -endScrollLayout;
+}
